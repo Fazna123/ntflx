@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background:black;
+    color:white;
+
+}
+.header{
+    width:100%;
+    height:80vh;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0.3), rgba(0,0,0,0.8)),url(images/header-image.png);
+    background-size:cover;
+    background-position: center;
+    background-image:no-repeat;
+    background-attachment: fixed;
+    padding:20px 8px;
+    position:relative;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:10px 0;
+}
+.logo{
+    width:100px;
+    cursor:pointer;
+}
+nav button{
+    background:rgb(180, 22, 22);
+    border:none;
+    border-radius: 5px;
+    margin:3px;
+    align-items:center;
+    color:white;
+    padding:8px 20px;
+    font-size: 16px;
+    font-stretch: 100%;
+    cursor:pointer;
+
+}
+.language-button{
+    display:inline-flex;
+    border:1px solid white;
+    background: transparent;
+    justify-content: space-between;
+    
+}
+.language-button img{
+    width:10px;
+    margin-left:10px;
+}
+.header-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+    
+
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight:900px;
+    max-width:700px;
+    margin-bottom: 10px;
+}
+.header-content h3{
+    font-weight:400px;
+    margin-bottom: 30px;
+}
+.emaillogin{
+    background:white;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    margin-top: 20px;
+    overflow: hidden;
+
+   
+}
+.emaillogin input{
+    flex:1;
+    border:none;
+    outline:none;
+    margin-left:20px;
+    
+}
+.emaillogin button{
+    background: rgb(185, 4, 4);
+    border:none;
+    color:white;
+    outline:none;
+    font-size: 16px;
+    cursor: pointer;
+    padding:12px 24px;
+}
+.exclusives{
+    padding:100px 15%;
+    font-size:30px;
+    border-top: 6px solid rgb(37, 37, 37);
+    
+}
+.row{
+   
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 50px 0;  
+    
+}
+   
+.text-coloumn{
+    flex-basis: 50%;
+    margin-bottom: 30px;
+   
+}
+.image-coloumn{
+    flex-basis:50%;
+    margin-bottom: 30px;
+}
+.image-coloumn img{
+    display:block;
+    width:90%;
+    margin:auto;
+}
+.exclusives h1{
+    font-weight:700px;
+    font-size:50px;
+    margin-bottom:20px;
+}
+.faq{
+    font-size:20px;
+    font-weight:600px;
+    padding: 80px 12%;
+    text-align:center;
+    border-top: 6px solid rgb(37, 37, 37);
+
+}
+.faq h2{
+    font-weight:600px;
+    font-size:35px;
+}
+.questions{
+    margin:60px auto;
+    width:100%;
+    max-width:700px;
+}
+.questions li{
+    list-style:none;
+    width:100%
+    padding:5px;
+}
+.questions label{
+    display:flex;
+    align-items: center;
+    padding:20px;
+    font-size:20px;
+    font-weight: 500px;
+    background:rgb(92, 91, 91);
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    transition:transform 0.5s;
+}
+input[type="radio"]{
+    display:none;
+}
+.questions .content{
+    background: rgb(92, 91, 91);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height 0.5s, padding 0.5s;
+}
+.questions input[type="radio"]:checked+label+.content{
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+.questions input[type="radio"]:checked+label::after{
+    transform:rotate(135deg);
+}
+
+.faq .emaillogin{
+    max-width: 600px;
+    margin:20px auto 60px;
+}
+.faq small{
+    font-size: 15px;
+}
+.footer{
+    padding:50px 15% 10px;
+    border-top: 6px solid rgb(37, 37, 37);
+    color: rgb(179, 177, 177);
+}   
+.footer h2{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+
+}
+.footer .coloumn{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 50px;
+    
+}  
+.footer .coloumn a{
+    display:block;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: rgb(179, 177, 177) ;
+    
+}
+.footer .row{
+    align-items: flex-start;
+    padding:10px 0; 
+}
+.footer .language-button{
+    padding: 5px 15px;
+    color:white;
+    font-size: 17px;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    outline:0.2px solid rgb(75, 73, 73);
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.footer .h4{
+    font-size: 18px;
+    font-weight: 200;
+    color:rgb(75, 73, 73);
+    margin-bottom: 10px;
+}
